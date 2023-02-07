@@ -19,13 +19,21 @@ function init_template(){
 
     add_theme_support('post-thumbnails');
     add_theme_support('title-tag');
+    add_theme_support('custom-logo',
+        [
+            'width' => 200,
+            'height'=> 107,
+            'flex-width' => true,
+            'flex-height' => true
+        ]);    
+    
 
-    register_nav_menus( 
-
-        array(
-            'top_menu' => 'Menú Principal'
-        )
-
+    register_nav_menus(
+        [
+            'main-menu' => 'Main Menu',
+            'left-menu' => 'Left Menu',
+            'right-menu'=> 'Right Menu'
+        ]
     );
 
 }

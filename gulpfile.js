@@ -22,14 +22,7 @@ function jsTask(){
 
 // Browsersync Tasks
 
-function browsersyncServe(cb){
-    browsersync.init({
-      server: {
-        baseDir: 'neuline'
-      }
-    });
-    cb();
-  }
+
 
 function browsersyncReload(cb){
     browsersync.reload();
@@ -40,13 +33,13 @@ function browsersyncReload(cb){
 function watchTask(){
     watch('*.php', browsersyncReload);
     watch(['assets/sass/**/*.scss', 'assets/js/**/*.js'], series(scssTask, jsTask, browsersyncReload));
+    watch('localhost:10058/', browsersyncReload)
 }
   
 // Default Gulp task
 exports.default = series(
     scssTask,
     jsTask,
-    browsersyncServe,
     watchTask
   );
 
