@@ -12,5 +12,9 @@
 
 <body>
     <?php wp_body_open();?>
-    <?php get_template_part('template-parts/content', 'header');?>
+    <header>
+        <?php get_template_part('template-parts/content', 'header');?>
+        <?php get_template_part('template-parts/content', 'mobile-header');?>
+    </header>
+    
     <main>

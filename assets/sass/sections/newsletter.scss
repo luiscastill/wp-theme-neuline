@@ -1,0 +1,14 @@
+.news{
+    background-color: var(--c-color-2);
+    min-height: 220px;
+    h2{
+        font-size: 35px;
+        font-family: var(--header-font);
+        font-style: italic;
+    }
+    
+    p{
+        font-family: 'Open Sans';
+        padding-top: 10px;
+    }
+}

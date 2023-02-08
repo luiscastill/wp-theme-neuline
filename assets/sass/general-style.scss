@@ -1,0 +1,40 @@
+@mixin font-menu{
+    font-family: var(--header-font);
+    font-weight: 400;
+    color: var(--c-color-2);
+    text-decoration: none;
+    text-align: center;
+}
+
+body {
+    --primary-color: #036D77;
+    --secoondary-color: #E19478;
+    --c-color-1: #001B20;
+    --c-color-2: #FDDCD1;
+    --header-font: 'Source Serif Pro';
+
+    margin: 0px;
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 400;
+    :hover{
+        text-decoration: none;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1em;
+    margin: 0px;
+}
+p{
+    margin: 0px;
+}

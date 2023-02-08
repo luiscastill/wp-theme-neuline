@@ -3,11 +3,13 @@
 function theme_links(){
 
     wp_register_style("gf", "https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Source+Serif+Pro:ital@0;1&display=swap", array(), false, 'all');
+    wp_register_style( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css', array(), '4.6.2', 'all' );
 
     wp_register_script("fa-script", 'https://kit.fontawesome.com/7264c8c889.js',array(),false,true);
+    wp_register_script( 'bundle', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js', array(), '4.6.2', 'all' );
 
-    wp_enqueue_style( 'myStyles', get_template_directory_uri()."/assets-results/css/style.css", array('gf'));
-    wp_enqueue_script( 'script', get_template_directory_uri()."/assets-results/js/custom.js", array('fa-script'),false,true);
+    wp_enqueue_style( 'myStyles', get_template_directory_uri()."/assets-results/css/style.css", array('gf','bootstrap'), false, 'all');
+    wp_enqueue_script( 'script', get_template_directory_uri()."/assets-results/js/custom.js", array('jquery','bundle','fa-script'),false,true);
 
 
 }

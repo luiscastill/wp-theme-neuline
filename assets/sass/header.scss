@@ -1,0 +1,198 @@
+.header {
+    @include font-menu;
+    font-size: 22px;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: var(--c-color-2);
+        text-decoration: none;
+        
+    }
+
+    &-sub {
+        background-color: var(--primary-color);
+        min-height: 45px;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        margin: 0px;
+
+        h2 {
+            font-size: 22px;
+            font-style: italic;
+            padding: 0px 40px 0px 0px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+    &-content {
+        min-height: 183.37px;
+        background-color: var(--c-color-1);
+        margin: 0px;
+        padding: 20px 0px 0px;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        .menu{
+            display: none;
+        }
+        .mobile-menu{
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            .menu-logo img{
+                width: 100%;
+                max-width: 183.24px;
+            }
+            .toggle-menu{
+                position: absolute;
+                cursor: pointer;
+                padding: 5px;
+                top: 10px;
+                right: 20px;
+                i{
+                    font-size: 29px;
+                }
+            }
+        }
+    }
+}
+.modal{
+    
+    &-dialog{
+        max-width: auto;
+        margin: 0px;
+        height: 100%;    
+    }
+    &-content{
+        height: 100%;
+        border: none;
+        border-radius: 0px;
+        background-color: var(--c-color-1);
+        padding:0px;
+    }
+    &-header{
+        display: flex;
+        justify-content: center !important;
+        border: none;
+        img{
+            max-width: 150px;
+        }
+        button.close{
+            position: absolute;
+            right: 20px;
+            color: var(--c-color-2);
+            opacity: 1 !important;
+            :hover{
+                color: var(--c-color-2);
+            }
+        }
+    }
+    &-body{
+        .menu-left-menu-container{
+            ul{
+                padding: 10px 0px 0px;
+                margin: 0px;
+                a{
+                    display: block;
+                    font-size: 24px;
+                    line-height: 2.5em;
+                    @include font-menu;
+                }
+            }
+        }
+    }
+}
+
+@media(min-width: 576px){
+    .modal-dialog {
+        max-width: 100%;
+    }
+}
+
+
+@media(min-width: 950px) {
+    .header {
+        font-family: var(--header-font);
+        color: var(--c-color-2);
+
+        a {
+            color: var(--c-color-2);
+        }
+
+        &-sub {
+            background-color: var(--primary-color);
+            min-height: 45px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        &-content {
+            min-height: 140px;
+            font-size: 20px;
+            padding: 27px 2.5%;
+            display: flex;
+
+            .menu {
+                display: grid;
+                grid-template-columns: 42.5% 15% 42.5%;
+                justify-self: center;
+                align-self: start;
+
+                &-logo {
+                    a {
+                    img {
+                        width: 100%;
+                        height: auto;
+                        max-width: 200px;
+                    }
+                    }
+                }
+                ul {
+                    margin: 0px;
+                    padding: 0px;
+
+                    &:not(.sub-menu) {
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                    }
+
+                    .sub-menu {
+                        margin: 0px;
+                        li {
+                            padding: 0px !important;
+                            a{
+                                font-size: 16px;
+                                line-height: 2em;
+                            }
+                        }
+                    }
+
+                    li {
+                        padding: 0px 20px;
+                        a{
+                           display: flex;
+                           text-align: center;
+                        }
+                    }
+                }
+            }
+            .mobile-menu{
+                display: none;
+            }
+        }
+    }
+    .modal, .modal-backdrop{
+        display: none !important;
+    }
+}
