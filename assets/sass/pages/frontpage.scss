@@ -1,0 +1,42 @@
+.hero{
+    background-color: var(--c-color-1);
+    &-content{
+        padding: 20px 0px 0px;
+    }
+    &-title {
+        background-image: url(/wp-content/themes/wp-theme-neuline/assets/img/Shape-2-colors.jpeg);
+        background-size: cover;
+        -webkit-background-clip: text;
+        display: inline-block;
+        -webkit-text-fill-color: #00000000;
+        h1{
+            line-height: 1.3em;
+            letter-spacing: -0.0415625em;
+        }
+        span{
+            font-style: italic;
+        }
+        
+    }
+    &-img{
+        padding: 20px 0px 0px 10px;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+@media(min-width:960px){
+    .hero{
+        
+        &-content{
+            padding: 136px 40px 0px 0px;
+        }
+        &-img{
+            padding: 80px 0px 80px 100px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
