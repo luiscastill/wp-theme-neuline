@@ -24,6 +24,19 @@
             width: 100%;
         }
     }
+    &-buttons{
+        display: grid;
+        grid-template-columns: 30% 30%;
+        gap: 30px;
+        a{
+            background-color: var(--primary-color);
+            padding: 12px 24px;
+            width: 100%;
+            color: var(--c-color-2);
+            text-align: center;
+        }
+        @include general-btn;
+    }
 }
 
 @media(min-width:960px){

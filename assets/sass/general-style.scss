@@ -5,6 +5,15 @@
     text-decoration: none;
     text-align: center;
 }
+@mixin general-btn{
+    font-size: 20px;
+    font-style: italic;
+    font-family: var(--header-font);
+    font-weight: 400;
+    a{
+        text-decoration: none;
+    }
+}
 
 body {
     --primary-color: #036D77;
